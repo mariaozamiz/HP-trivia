@@ -9,5 +9,3 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
-
-//Esta página asocia el div id root de la página con el index de public
