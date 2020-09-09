@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Según Percy Weasley, ¿cuántos idiomas habla Bartemius Crouch?",
+        "correct_answer": "Más de 200",
+        "incorrect_answers": ["Más de 25", "Más de 50", "Más de 100"],
+        "explanation": "Entre ellos Sirenio, Duendigonza y Troll"
+    },
+
+    {
+        "question": "¿Cuántos tartas de cumpleaños recibe Harry por lechuza antes de dar comienzo su cuarto curso en Hogwards?",
+        "correct_answer": "Cuatro",
+        "incorrect_answers": ["Ninguna", "Dos", "Tres"],
+        "explanation": "Ron, Hermione, Hagrid y Sirius le enviaron tartas ese verano"
+    },
+
+    {
+        "question": "¿Qué come un escreguto de cola explosiva?",
+        "correct_answer": "Es un misterio",
+        "incorrect_answers": [
+            "Hígados de rana",
+            "Huevos de hormiga",
+            "Trozos de culebra"
+        ],
+        "explanation": "Aunque Hagrid y su alumnado ofrecen todo tipo de comida a los escregutos, nada parece gustarles"
+    }
+]
