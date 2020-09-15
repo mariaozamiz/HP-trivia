@@ -1,7 +1,17 @@
 const getDataFromApi = () => {
-    fetch('./data/trivia.json')
+    return fetch(
+        'https://opentdb.com/api.php?amount=10&category=20&type=multiple'
+    )
         .then((response) => response.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            return data.results.map((result) => {
+                return {
+                    question: result.question,
+                    correctAnswer: result.correct_answer,
+                    incorrectAnswers: result.incorrect_answers,
+                };
+            });
+        })
         .catch((err) => console.error('Ha habido un error ' + err));
 };
 
