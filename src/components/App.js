@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import Question from './QuestionCard';
 import getDataFromApi from '../services/api';
-import Answers from './Answers';
 
 function App() {
-    const startTrivia = (async) => {};
+    const [triviaCards, setTriviaCards] = useState([]);
 
-    const [cards, setCards] = useState([]);
+    console.log(triviaCards);
 
     useEffect(() => {
         getDataFromApi().then((data) => {
-            setCards(data);
+            setTriviaCards(data);
         });
     }, []);
 
-    return (
+    return triviaCards.length > 0 ? (
         <>
-            <h1>REACT Quiz</h1>
-            <button className="start" onClik={startTrivia}>
-                Empezar
-            </button>
-            <Question />
-            <Answers />
+            <h2>{triviaCards[0].question}</h2>
+            <button>{triviaCards[0].correctAnswer}</button>
+            <button>{triviaCards[0].incorrectAnswers[0]}</button>
+            <button>{triviaCards[0].incorrectAnswers[1]}</button>
+            <button>{triviaCards[0].incorrectAnswers[2]}</button>
         </>
+    ) : (
+        <p>Loading</p>
     );
 }
 
