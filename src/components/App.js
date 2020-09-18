@@ -14,14 +14,14 @@ function App() {
 
     return triviaCards.length > 0 ? (
         <>
-            <h2>{triviaCards[0].question}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: triviaCards[0].question }} />
             <button>{triviaCards[0].correctAnswer}</button>
             <button>{triviaCards[0].incorrectAnswers[0]}</button>
             <button>{triviaCards[0].incorrectAnswers[1]}</button>
             <button>{triviaCards[0].incorrectAnswers[2]}</button>
         </>
     ) : (
-        <p>Loading</p>
+        <h2>Loading</h2>
     );
 }
 
