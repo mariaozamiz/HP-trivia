@@ -4,16 +4,16 @@ function AnswersList(props) {
     return (
         <div className="main__answers">
             <button className="button__answer">
-                {props.triviaCards[0].correctAnswer}
+                {props.triviaCard.correctAnswer}
             </button>
             <button className="button__answer">
-                {props.triviaCards[0].incorrectAnswers[0]}
+                {props.triviaCard.incorrectAnswers[0]}
             </button>
             <button className="button__answer">
-                {props.triviaCards[0].incorrectAnswers[1]}
+                {props.triviaCard.incorrectAnswers[1]}
             </button>
             <button className="button__answer">
-                {props.triviaCards[0].incorrectAnswers[2]}
+                {props.triviaCard.incorrectAnswers[2]}
             </button>
         </div>
     );

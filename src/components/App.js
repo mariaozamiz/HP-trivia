@@ -11,8 +11,11 @@ function App() {
         });
     }, []);
 
+    const getRandomCard = () =>
+        triviaCards[Math.floor(Math.random() * triviaCards.length)];
+
     return triviaCards.length > 0 ? (
-        <body className="body wrapper">
+        <div className="app wrapper">
             <header className="header">
                 <nav className="header__nav">
                     <div className="nav__item">
@@ -26,8 +29,8 @@ function App() {
                     </div>
                 </nav>
             </header>
-            <Card triviaCards={triviaCards} />
-        </body>
+            <Card triviaCard={getRandomCard()} />
+        </div>
     ) : (
         <h2>Loading</h2>
     );

@@ -8,10 +8,10 @@ function Card(props) {
             <h2
                 className="main__question"
                 dangerouslySetInnerHTML={{
-                    __html: props.triviaCards[0].question,
+                    __html: props.triviaCard.question,
                 }}
             />
-            <AnswersList triviaCards={props.triviaCards} />
+            <AnswersList triviaCard={props.triviaCard} />
         </main>
     );
 }
